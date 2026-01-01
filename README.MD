@@ -63,3 +63,13 @@ pio device monitor -b 115200
 ```
 
 Adjust the environment (`lolin_c3_mini`, etc.) as needed.
+
+## Web terminal (ESP32)
+
+<img src="screen_web.png" alt="Web Terminal Screenshot" width="400"/>
+
+The ESP32 now serves an embedded web terminal (CRT-style) over WiFi and
+forwards input line-by-line to the BASIC interpreter.
+
+- URL: `http://<esp32-ip>/`
+- Endpoint de comandos: `POST http://<esp32-ip>/line`
