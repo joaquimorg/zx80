@@ -4,10 +4,6 @@ This project is a small ZX80-style BASIC interpreter that runs on ESP32 boards
 using Arduino + PlatformIO. It is an approximation of the original Sinclair
 ZX80 BASIC: the syntax and behavior are similar, but not a full or exact clone.
 
-The interpreter runs over the serial monitor at 115200 baud and accepts both
-immediate commands and numbered program lines. Programs are stored in RAM and
-can be listed or run from the prompt.
-
 ## BASIC commands supported
 
 Statements (keywords are case-insensitive):
@@ -32,8 +28,8 @@ Statements (keywords are case-insensitive):
 - POKE addr, value
 - RANDOMISE [seed] / RAND [seed]
 - DIM A(n) or DIM A(n,m)
-- LOAD (no-op placeholder)
-- SAVE (no-op placeholder)
+- LOAD 
+- SAVE
 
 Functions and expression features:
 
@@ -50,8 +46,6 @@ Functions and expression features:
   arrays).
 - No string variables; `PRINT` supports string literals in quotes and numeric
   expressions.
-- LOAD/SAVE are placeholders for future storage integration.
-- BREAK support via Ctrl-C (0x03) on the serial monitor.
 
 ## Build and upload
 
